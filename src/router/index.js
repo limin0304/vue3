@@ -106,6 +106,26 @@ const routes = [
     path: '/to-refs',
     name: 'to-refs',
     component: () => import('../views/ToRefs.vue')
+  },
+  {
+    path: '/custom-ref',
+    name: 'custom-ref',
+    component: () => import('../views/CustomRef.vue')
+  },
+  {
+    path: '/custom-ref2',
+    name: 'custom-ref2',
+    component: () => import('../views/CustomRef2.vue')
+  },
+  {
+    path: '/ref-dom',
+    name: 'ref-dom',
+    component: () => import('../views/RefDom.vue')
+  },
+  {
+    path: '/readonly',
+    name: 'readonly',
+    component: () => import('../views/Readonly.vue')
   }
 ]
 
