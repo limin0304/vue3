@@ -1,0 +1,117 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue')
+  },
+  {
+    path: '/vue2-problem',
+    name: 'vue2-problem',
+    component: () => import('../views/Vue2Problem.vue')
+  },
+  {
+    path: '/list-optionApi',
+    name: 'list-optionApi',
+    component: () => import('../views/ListOptionApi.vue')
+  },
+  {
+    path: '/list-compositionApi',
+    name: 'list-compositionApi',
+    component: () => import('../views/ListCompositionApi.vue')
+  },
+  {
+    path: '/composition-base',
+    name: 'composition-base',
+    component: () => import('../views/CompositionBase.vue')
+  },
+  {
+    path: '/composition-extract',
+    name: 'composition-extract',
+    component: () => import('../views/CompositionExtract.vue')
+  },
+  {
+    path: '/composition-combine',
+    name: 'composition-combine',
+    component: () => import('../views/CompositionCombine.vue')
+  },
+  {
+    path: '/composition-nature',
+    name: 'composition-nature',
+    component: () => import('../views/CompositionNature.vue')
+  },
+  {
+    path: '/composition-timing',
+    name: 'composition-timing',
+    component: () => import('../views/CompositionTiming.vue')
+  },
+  {
+    path: '/reactive',
+    name: 'reactive',
+    component: () => import('../views/Reactive.vue')
+  },
+  {
+    path: '/ref',
+    name: 'ref',
+    component: () => import('../views/Ref.vue')
+  },
+  {
+    path: '/difference',
+    name: 'difference',
+    component: () => import('../views/Difference.vue')
+  },
+  {
+    path: '/recursive-monitor',
+    name: 'recursive-monitor',
+    component: () => import('../views/RecursiveMonitor.vue')
+  },
+  {
+    path: '/non-recursive-monitor',
+    name: 'non-recursive-monitor',
+    component: () => import('../views/NonRecursiveMonitor.vue')
+  },
+  {
+    path: '/shallow-ref',
+    name: 'shallow-ref',
+    component: () => import('../views/ShallowRef.vue')
+  },
+  {
+    path: '/to-raw',
+    name: 'to-raw',
+    component: () => import('../views/ToRaw.vue')
+  },
+  {
+    path: '/to-raw2',
+    name: 'to-raw2',
+    component: () => import('../views/ToRaw2.vue')
+  },
+  {
+    path: '/mark-raw',
+    name: 'mark-raw',
+    component: () => import('../views/MarkRaw.vue')
+  },
+  {
+    path: '/to-ref',
+    name: 'to-ref',
+    component: () => import('../views/ToRef.vue')
+  },
+  {
+    path: '/to-refs',
+    name: 'to-refs',
+    component: () => import('../views/ToRefs.vue')
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
