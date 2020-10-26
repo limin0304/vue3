@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <p>{{name}}</p>
-    <button @click="myFn1">按钮</button>
-    <p>{{age}}</p>
-    <button @click="myFn2">按钮</button>
-  </div>
+    <div>
+        <p>{{ name }}</p>
+        <button @click="myFn1">按钮</button>
+        <p>{{ age }}</p>
+        <button @click="myFn2">按钮</button>
+    </div>
 </template>
 
 <script>
-  /*
+/*
   1.setup执行时机
+  setup 取代了 beforeCreate 和 Created
   beforeCreate: 表示组件刚刚被创建出来, 组件的data和methods还没有初始化好
-  setup
   Created     : 表示组件刚刚被创建出来, 并且组件的data和methods已经初始化好
 
   2.setup注意点
@@ -21,34 +21,40 @@
     所以Vue为了避免我们错误的使用, 它直接将setup函数中this修改成了undefined
   - setup函数只能是同步的不能是异步的
   * */
-  import {ref} from 'vue';
+import { ref } from "vue";
 export default {
-  name: 'App',
-  data: function(){
-    return {
-      name: 'lnj',
-    }
-  },
-  methods:{
-    myFn1(){
-      alert('abc');
+    name: "App",
+    data: function () {
+        return {
+            name: "zs",
+        };
     },
-  },
-  // async setup() {
-  setup() {
-    let age = ref(18);
-    function myFn2() {
-      alert('www.it666.com');
-    }
+    methods: {
+        myFn1() {
+            alert("abc");
+        },
+    },
+    beforeCreate() {
+        console.log("beforeCreate");
+    },
+    created() {
+        console.log("created");
+    },
+    // async setup() {
+    setup() {
+        console.log("setup");
+        let age = ref(18);
+        function myFn2() {
+            alert("18");
+        }
 
-    // console.log(this); // undefined
-    // console.log(this.name);
-    // this.myFn1();
-    return {age, myFn2}
-  }
-}
+        // console.log('this:', this); // undefined
+        // console.log(this.name);
+        // this.myFn1();
+        return { age, myFn2 };
+    },
+};
 </script>
 
 <style>
-
 </style>

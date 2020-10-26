@@ -30,11 +30,12 @@
         >
           <a-sub-menu key="sub1">
             <template v-slot:title>
-              <span><user-outlined />vue3.0的来源</span>
+              <span><user-outlined />Vue3.0开篇</span>
             </template>
-            <a-menu-item key="1" @click="goto('/vue2-problem')">vue2.0存在的问题</a-menu-item>
-            <a-menu-item key="2" @click="goto('/list-optionApi')">vue2.0的代码</a-menu-item>
-            <a-menu-item key="3" @click="goto('/list-compositionApi')">vue3.0的代码</a-menu-item>
+            <a-menu-item key="1" @click="goto('/vue2-highlights')">Vue3.0六大亮点</a-menu-item>
+            <a-menu-item key="2" @click="goto('/get-start')">如何开始</a-menu-item>
+            <a-menu-item key="3" @click="goto('/list-optionApi')">Vue2.0的代码</a-menu-item>
+            <a-menu-item key="4" @click="goto('/list-compositionApi')">Vue3.0的代码</a-menu-item>
           </a-sub-menu>
           <a-sub-menu key="sub2">
             <template v-slot:title>
@@ -59,8 +60,11 @@
             <a-menu-item key="21" @click="goto('/custom-ref2')">customRef下</a-menu-item>
             <a-menu-item key="22" @click="goto('/ref-dom')">ref获取元素</a-menu-item>
             <a-menu-item key="23" @click="goto('/readonly')">readonly</a-menu-item>
+            <a-menu-item key="24" @click="goto('/watch-effect')">watchEffect</a-menu-item>
+            <a-menu-item key="25" @click="goto('/watch')">watch</a-menu-item>
+            <a-menu-item key="26" @click="goto('/principle')">响应式原理</a-menu-item>
           </a-sub-menu>
-          <a-sub-menu key="sub3">
+          <!-- <a-sub-menu key="sub3">
             <template v-slot:title>
               <span><notification-outlined />subnav 3</span>
             </template>
@@ -68,7 +72,7 @@
             <a-menu-item key="10">option10</a-menu-item>
             <a-menu-item key="11">option11</a-menu-item>
             <a-menu-item key="12">option12</a-menu-item>
-          </a-sub-menu>
+          </a-sub-menu> -->
         </a-menu>
       </a-layout-sider>
       <a-layout style="padding: 0 24px 24px">

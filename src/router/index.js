@@ -13,9 +13,9 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
-    path: '/vue2-problem',
-    name: 'vue2-problem',
-    component: () => import('../views/Vue2Problem.vue')
+    path: '/vue2-highlights',
+    name: 'vue2-highlights',
+    component: () => import('../views/Vue3Highlights.vue')
   },
   {
     path: '/list-optionApi',
@@ -26,6 +26,11 @@ const routes = [
     path: '/list-compositionApi',
     name: 'list-compositionApi',
     component: () => import('../views/ListCompositionApi.vue')
+  },
+  {
+    path: '/get-start',
+    name: 'get-start',
+    component: () => import('../views/GetStart.vue')
   },
   {
     path: '/composition-base',
@@ -126,6 +131,26 @@ const routes = [
     path: '/readonly',
     name: 'readonly',
     component: () => import('../views/Readonly.vue')
+  },
+  {
+    path: '/computed',
+    name: 'computed',
+    component: () => import('../views/Computed.vue')
+  },
+  {
+    path: '/watch-effect',
+    name: 'watch-effect',
+    component: () => import('../views/WatchEffect.vue')
+  },
+  {
+    path: '/watch',
+    name: 'watch',
+    component: () => import('../views/Watch.vue')
+  },
+  {
+    path: '/principle',
+    name: 'principle',
+    component: () => import('../views/Principle.vue')
   }
 ]
 

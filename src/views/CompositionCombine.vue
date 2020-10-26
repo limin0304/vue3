@@ -19,8 +19,9 @@
 </template>
 
 <script>
-import useRemoveStudent from "./rem";
-import useAddStudent from "./add";
+import { reactive, ref } from "vue";
+// import useRemoveStudent from "./rem";
+// import useAddStudent from "./add";
 export default {
     name: "App",
     setup() {
@@ -29,39 +30,39 @@ export default {
         return { state, remStu, state2, addStu };
     },
 };
-/*
+
 function useAddStudent(state) {
-  let state2 = reactive({
-    stu:{
-      id:'',
-      name:'',
-      age:''
+    let state2 = reactive({
+        stu: {
+            id: "",
+            name: "",
+            age: "",
+        },
+    });
+    function addStu(e) {
+        e.preventDefault();
+        const stu = Object.assign({}, state2.stu);
+        state.stus.push(stu);
+        state2.stu.id = "";
+        state2.stu.name = "";
+        state2.stu.age = "";
     }
-  });
-  function addStu(e) {
-    e.preventDefault();
-    const stu = Object.assign({}, state2.stu);
-    state.stus.push(stu);
-    state2.stu.id = '';
-    state2.stu.name = '';
-    state2.stu.age = '';
-  }
-  return {state2, addStu}
+    return { state2, addStu };
 }
+
 function useRemoveStudent() {
-  let state = reactive({
-    stus:[
-      {id:1, name:'zs', age:10},
-      {id:2, name:'ls', age:20},
-      {id:3, name:'ww', age:30},
-    ]
-  });
-  function remStu(index) {
-    state.stus = state.stus.filter((stu, idx) => idx !== index);
-  }
-  return {state, remStu};
+    let state = reactive({
+        stus: [
+            { id: 1, name: "zs", age: 10 },
+            { id: 2, name: "ls", age: 20 },
+            { id: 3, name: "ww", age: 30 },
+        ],
+    });
+    function remStu(index) {
+        state.stus = state.stus.filter((stu, idx) => idx !== index);
+    }
+    return { state, remStu };
 }
-*/
 </script>
 
 <style>

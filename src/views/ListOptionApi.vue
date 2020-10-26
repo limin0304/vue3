@@ -79,19 +79,23 @@ const columns = [
 ];
 
 import mockData from "./mockData";
-
+// vue2.0 所有的业务数据和逻辑都放在 data 和 methods 里面，代码组织混乱，不方便复用逻辑和阅读。
 export default {
     data() {
         return {
+
+            // 搜索
             search: {
                 user: "",
                 phone: "",
             },
 
+            // 表格
             data: [],
             columns,
             loading: false,
-
+            
+            // 新增弹框
             visible: false,
             form: {
                 key: "",
