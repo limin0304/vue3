@@ -16,6 +16,7 @@ export default {
         function myFn() {
             state.value = "zs";
             console.log(obj);
+            
             console.log(state);
         }
         return { state, myFn };

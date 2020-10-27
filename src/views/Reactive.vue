@@ -31,6 +31,7 @@ export default {
         let state = reactive({
             time: new Date(),
         });
+        console.log(state)
         function myFn() {
             // state = 666; // 由于在创建响应式数据的时候传递的不是一个对象, 所以无法实现响应式
             // state.age = 666;
