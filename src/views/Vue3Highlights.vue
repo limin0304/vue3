@@ -35,7 +35,7 @@ export default {
                         但是因为是同一个函数，所以没有追踪变化, 直接缓存起来复用即可<br/><br/>
                     - ssr渲染<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;+ 当有大量静态的内容时候，这些内容会被当做纯字符串推进一个buffer里面，<br/>
-                        即使存在动态的绑定，会通过模板插值嵌入进去。这样会比通过虚拟dmo来渲染的快上很多很多。<br/>
+                        即使存在动态的绑定，会通过模板插值嵌入进去。这样会比通过虚拟dom来渲染的快上很多很多。<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;+ 当静态内容大到一定量级时候，会用_createStaticVNode方法在客户端去生成一个static node，<br/>
                         这些静态node，会被直接innerHtml，就不需要创建对象，然后根据对象渲染。<br/><br/><br/>
 

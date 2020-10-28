@@ -118,6 +118,7 @@ function useTable() {
             table.loading = false;
         }, 2000);
     }
+
     return { table, getList };
 }
 
@@ -189,6 +190,7 @@ function useModalForm() {
                 console.log("error", err);
             });
     };
+    
     return {
         labelCol: { span: 6 },
         wrapperCol: { span: 16 },
