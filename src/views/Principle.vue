@@ -28,16 +28,17 @@ export default {
         };
 
         let state = shallowReactive(obj);
+
         function myFn() {
             state.a = "1";
-            state.gf.b = "2";
-            state.gf.f.c = "3";
-            state.gf.f.s.d = "4";
+            // state.gf.b = "2";
+            // state.gf.f.c = "3";
+            // state.gf.f.s.d = "4";
 
             console.log(state);
-            console.log(state.gf);
-            console.log(state.gf.f);
-            console.log(state.gf.f.s);
+            // console.log(state.gf);
+            // console.log(state.gf.f);
+            // console.log(state.gf.f.s);
         }
 
         // let state = shallowRef(obj);
@@ -57,16 +58,18 @@ export default {
     },
 };
 
-function shallowRef(val) {
-    return shallowReactive({ value: val });
-}
+// function shallowRef(val) {
+//     return shallowReactive({ value: val });
+// }
 
 function shallowReactive(obj) {
     return new Proxy(obj, {
         get(obj, key) {
+            // console.log(obj, key);
             return obj[key];
         },
         set(obj, key, val) {
+            console.log(obj, key, val);
             obj[key] = val;
             console.log("更新UI界面");
             return true;

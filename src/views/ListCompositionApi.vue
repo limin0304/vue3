@@ -103,29 +103,6 @@ export default {
     },
 };
 
-function useModal() {
-    let visible = ref(false);
-
-    function toggleModal() {
-        visible.value = !visible.value;
-    }
-
-    return { visible, toggleModal }
-}
-
-function useSearch(getList) {
-    const search = reactive({
-        user: "",
-        phone: "",
-    });
-
-    function onSearch() {
-        getList(search);
-    }
-
-    return { search, onSearch };
-}
-
 function useTable() {
     const table = reactive({
         list: [],
@@ -142,6 +119,29 @@ function useTable() {
         }, 2000);
     }
     return { table, getList };
+}
+
+function useSearch(getList) {
+    const search = reactive({
+        user: "",
+        phone: "",
+    });
+
+    function onSearch() {
+        getList(search);
+    }
+
+    return { search, onSearch };
+}
+
+function useModal() {
+    let visible = ref(false);
+
+    function toggleModal() {
+        visible.value = !visible.value;
+    }
+
+    return { visible, toggleModal }
 }
 
 function useModalForm() {

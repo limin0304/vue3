@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>{{ name }}</p>
-        <p>{{ age }}</p>
+        <p>{{ state.name.value }}</p>
+        <p>{{ state.age.value }}</p>
         <button @click="myFn">按钮</button>
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
             // console.log(name);
             // console.log(age);
         }
-        return { ...state, myFn };
+        return { state, myFn };
     },
 };
 </script>

@@ -12,7 +12,7 @@ export default {
         const lt = "<<";
         return (
             <div style="padding: 40px; position: relative">
-            <img style={{ opacity: this.visible ? 1 : 0 }} onClick={() => this.showImg} class="img" src='./diff.png' />
+            <img style={{ opacity: this.visible ? 1 : 0 }} onClick={() => this.showImg()} class="img" src={require('./diff.png')} />
                 1. Vue3.0六大亮点<br/>
                     - Performance：性能比Vue 2.x快1.2~2倍<br/>
                     - Tree shaking support：按需编译,体积比Vue2.x更小<br/>
@@ -42,16 +42,16 @@ export default {
 
                 3. `附录: enum PatchFlags<br/>
                     TEXT = 1,// 动态文本节点<br/>
-                    CLASS = 1 {{ lt }} 1, // 2  // 动态 class<br/>
-                    STYLE = 1 {{lt}} 2, // 4 // 动态 style<br/>
-                    PROPS = 1 {{lt}} 3, // 8 // 动态属性，但不包含类名和样式<br/>
-                    FULL_PROPS = 1 {{lt}} 4, // 16 // 具有动态 key 属性，当 key 改变时，需要进行完整的 diff 比较。<br/>
-                    HYDRATE_EVENTS = 1 {{lt}} 5, // 32 // 带有监听事件的节点<br/>
-                    STABLE_FRAGMENT = 1 {{lt}} 6, // 64 // 一个不会改变子节点顺序的 fragment<br/>
-                    KEYED_FRAGMENT = 1 {{lt}} 7, // 128 // 带有 key 属性的 fragment 或部分子字节有 key<br/>
-                    UNKEYED_FRAGMENT = 1 {{lt}} 8, // 256 // 子节点没有 key 的 fragment<br/>
-                    NEED_PATCH = 1 {{lt}} 9, // 512 // 一个节点只会进行非 props 比较<br/>
-                    DYNAMIC_SLOTS = 1 {{lt}} 10, // 1024 // 动态 slot<br/>
+                    CLASS = 1 { lt } 1, // 2  // 动态 class<br/>
+                    STYLE = 1 { lt } 2, // 4 // 动态 style<br/>
+                    PROPS = 1 { lt } 3, // 8 // 动态属性，但不包含类名和样式<br/>
+                    FULL_PROPS = 1 { lt } 4, // 16 // 具有动态 key 属性，当 key 改变时，需要进行完整的 diff 比较。<br/>
+                    HYDRATE_EVENTS = 1 { lt } 5, // 32 // 带有监听事件的节点<br/>
+                    STABLE_FRAGMENT = 1 { lt } 6, // 64 // 一个不会改变子节点顺序的 fragment<br/>
+                    KEYED_FRAGMENT = 1 { lt } 7, // 128 // 带有 key 属性的 fragment 或部分子字节有 key<br/>
+                    UNKEYED_FRAGMENT = 1 { lt } 8, // 256 // 子节点没有 key 的 fragment<br/>
+                    NEED_PATCH = 1 { lt } 9, // 512 // 一个节点只会进行非 props 比较<br/>
+                    DYNAMIC_SLOTS = 1 { lt } 10, // 1024 // 动态 slot<br/>
                     HOISTED = -1, // 静态节点<br/>
                     // 指示在 diff 过程应该要退出优化模式<br/>
                     BAIL = -2`<br/>

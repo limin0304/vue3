@@ -2,6 +2,7 @@
     <div>
         <p>{{ age }}</p>
         <p>{{ state.name }}</p>
+        <button @click="myFn">按钮</button>
     </div>
 </template>
 
@@ -33,12 +34,12 @@ export default {
 
 
 
-        setTimeout(() => {
+        function myFn() {
             age.value++;
             state.name = '小红';
-        }, 100);
+        }
 
-        return { age, state };
+        return { age, state, myFn };
     },
 };
 </script>
