@@ -60,8 +60,9 @@
             <a-menu-item key="21" @click="goto('/custom-ref2')">customRef下</a-menu-item>
             <a-menu-item key="22" @click="goto('/ref-dom')">ref获取元素</a-menu-item>
             <a-menu-item key="23" @click="goto('/readonly')">readonly</a-menu-item>
-            <a-menu-item key="24" @click="goto('/watch-effect')">watchEffect</a-menu-item>
-            <a-menu-item key="25" @click="goto('/watch')">watch</a-menu-item>
+            <a-menu-item key="23-2" @click="goto('/computed')">computed</a-menu-item>
+            <a-menu-item key="24" @click="goto('/watch')">watch</a-menu-item>
+            <a-menu-item key="25" @click="goto('/watch-effect')">watchEffect</a-menu-item>
             <a-menu-item key="26" @click="goto('/principle')">响应式原理</a-menu-item>
           </a-sub-menu>
           <!-- <a-sub-menu key="sub3">

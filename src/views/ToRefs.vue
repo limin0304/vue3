@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>{{ state.name.value }}</p>
-        <p>{{ state.age.value }}</p>
+        <p>{{ name }}</p>
+        <p>{{ age }}</p>
         <button @click="myFn">按钮</button>
     </div>
 </template>
@@ -14,19 +14,19 @@ export default {
         let obj = reactive({ name: "lnj", age: 18 });
         // let name = toRef(obj, 'name');
         // let age = toRef(obj, 'age');
-        let state = toRefs(obj);
+        let { name, age } = toRefs(obj);
 
         function myFn() {
-            // name.value = 'zs';
-            // age.value = 666;
-            state.name.value = "zs";
-            state.age.value = 666;
-            console.log(obj);
-            console.log(state);
+            name.value = 'zs';
+            age.value = 666;
+            // state.name.value = "zs";
+            // state.age.value = 666;
+            // console.log(obj);
+            // console.log(state);
             // console.log(name);
             // console.log(age);
         }
-        return { state, myFn };
+        return { name, age, myFn };
     },
 };
 </script>

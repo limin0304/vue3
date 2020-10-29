@@ -23,8 +23,8 @@ import { reactive } from "vue";
 export default {
     name: "App",
     setup() {
-        let state = reactive({
-            // let state = ref({
+        // let state = reactive({
+            let state = ref({
             a: "a",
             gf: {
                 b: "b",
@@ -37,15 +37,15 @@ export default {
             },
         });
         function myFn() {
-            state.a = '1';
-            state.gf.b = '2';
-            state.gf.f.c = '3';
-            state.gf.f.s.d = '4';
+            // state.a = '1';
+            // state.gf.b = '2';
+            // state.gf.f.c = '3';
+            // state.gf.f.s.d = '4';
 
-            // state.value.a = '1';
-            // state.value.gf.b = '2';
-            // state.value.gf.f.c = '3';
-            // state.value.gf.f.s.d = '4';
+            state.value.a = '1';
+            state.value.gf.b = '2';
+            state.value.gf.f.c = '3';
+            state.value.gf.f.s.d = '4';
 
             console.log(state);
             console.log(state.gf);

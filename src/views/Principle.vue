@@ -117,6 +117,14 @@ function readonly(obj) {
     return shallowReadonly({ value: obj });
 }
 
-</script>
 
+/* Proxy 比 Object.defineProperty 的优势：
+
+1. Proxy可以直接监听对象而非属性
+
+2. Proxy可以直接监听数组的变化
+
+3. Proxy有多达13种拦截方法,不限于apply、ownKeys、deleteProperty、has等等是Object.defineProperty不具备的。 */
+
+</script>
 

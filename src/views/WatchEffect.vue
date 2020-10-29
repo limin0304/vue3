@@ -10,22 +10,22 @@ export default {
     name: "App",
     setup() {
         let age = ref(18);
-        watchEffect(() => console.log(age.value));
+        // watchEffect(() => console.log(age.value));
 
-        setTimeout(() => {
-            age.value++;
-        }, 100);
-
-        
-        // const stop = watchEffect(() => console.log(age.value));
-
-        // setInterval(() => {
-        //     if (age.value === 20) {
-        //         stop();
-        //         return;
-        //     }
+        // setTimeout(() => {
         //     age.value++;
         // }, 100);
+
+        
+        const stop = watchEffect(() => console.log(age.value));
+
+        setInterval(() => {
+            if (age.value === 20) {
+                stop();
+                return;
+            }
+            age.value++;
+        }, 100);
 
         return { age };
     },

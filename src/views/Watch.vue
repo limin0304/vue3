@@ -22,15 +22,15 @@ export default {
             name: '小明'
         });
         
-        // watch(() => state.name, (current, prev) => {
-        //     console.log('当前：', current);
-        //     console.log('之前：', prev);
-        // });
+        watch(() => state.name, (current, prev) => {
+            console.log('当前：', current);
+            console.log('之前：', prev);
+        });
 
-        // watch([age, () => state.name], ([current, current2], [prev, prev2]) => {
-        //     console.log('当前：', current, current2);
-        //     console.log('之前：', prev, prev2);
-        // })
+        watch([age, () => state.name], ([current, current2], [prev, prev2]) => {
+            console.log('当前：', current, current2);
+            console.log('之前：', prev, prev2);
+        })
 
 
 

@@ -11,7 +11,6 @@ export default {
     name: "App",
     // setup函数是组合API的入口函数
     setup() {
-        // let count = 0;
         // 定义了一个名称叫做count变量, 这个变量的初始值是0
         // 这个变量发生改变之后, Vue会自动更新UI
         let count = ref(0);

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <p>{{ state }}</p>
+        <p>{{ state.name }}</p>
+        <p>{{ state.age }}</p>
         <button @click="myFn">按钮</button>
     </div>
 </template>
@@ -21,6 +22,7 @@ export default {
         console.log(obj);
         console.log(state);
         console.log(obj2);
+        console.log(obj2 === obj);
 
         function myFn() {
             obj2.name = "zs";

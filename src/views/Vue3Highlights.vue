@@ -1,5 +1,10 @@
 <script>
 import { ref } from "vue";
+
+function Test(props) {
+    console.log(props);
+    return <div>hello{props.title}</div>
+}
 export default {
     setup() {
         let visible = ref(false);
@@ -12,13 +17,14 @@ export default {
         const lt = "<<";
         return (
             <div style="padding: 40px; position: relative">
+            <Test title="小明" />
             <img style={{ opacity: this.visible ? 1 : 0 }} onClick={() => this.showImg()} class="img" src={require('./diff.png')} />
                 1. Vue3.0六大亮点<br/>
                     - Performance：性能比Vue 2.x快1.2~2倍<br/>
                     - Tree shaking support：按需编译,体积比Vue2.x更小<br/>
-                    - Composition API: 组合API(类似React Hooks)<br/>
+                    - Composition API: 组合API(类似React Hooks) <a href="https://composition-api.vuejs.org/zh/" target="_blank">（https://composition-api.vuejs.org/zh/）</a><br/>
                     - Better TypeScript support：更好的 Ts 支持<br/>
-                    - Custom Renderer API：暴露了自定义渲染API<br/>
+                    - Custom Renderer API：暴露了自定义渲染API<a href="http://www.zhufengpeixun.com/jg-vue/vue-analyse/custom-render.html#%E4%B8%80-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B8%B2%E6%9F%93%E5%99%A8" target="_blank">（如何实现一个自定义渲染器）</a><br/>
                     - Fragment, Teleport(Protal), Suspense：更先进的组件<br/><br/>
 
                 2. Vue3.0是如何变快的?<br/><br/>
